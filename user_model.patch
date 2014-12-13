@@ -1,0 +1,51 @@
+From cec249e0450116224528330256f6efda627a532d Mon Sep 17 00:00:00 2001
+From: Doha Basem <doha.basem@gmail.com>
+Date: Fri, 21 Nov 2014 10:45:29 +0200
+Subject: [PATCH 1/2] Doha Test in README my branch
+
+---
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index e7c179b..b1cd18f 100644
+--- a/README.md
++++ b/README.md
+@@ -4,4 +4,5 @@ ProjectInventory
+ This an Agile Project 
+ 
+ 
+-Doha Basem
+\ No newline at end of file
++Doha Basem
++ Test
+\ No newline at end of file
+-- 
+1.9.4.msysgit.2
+
+
+From c146f45ccd067f00f06a89a9a560e93b7de70e30 Mon Sep 17 00:00:00 2001
+From: Doha Basem <doha.basem@gmail.com>
+Date: Sat, 22 Nov 2014 17:08:36 +0200
+Subject: [PATCH 2/2] Testing patch files
+
+---
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index b1cd18f..df7f5b0 100644
+--- a/README.md
++++ b/README.md
+@@ -5,4 +5,5 @@ This an Agile Project
+ 
+ 
+ Doha Basem
+- Test
+\ No newline at end of file
++ Test
++patch
+\ No newline at end of file
+-- 
+1.9.4.msysgit.2
+

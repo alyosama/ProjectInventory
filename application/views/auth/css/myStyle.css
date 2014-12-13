@@ -1,0 +1,59 @@
+body.container-fluid#SignUp{
+ background-image: url("../SignUpBG.jpg") ;
+ 
+       background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+	
+      }
+ 
+.container-fluid#myForm{
+position:fixed;
+background-color:green;
+ position: absolute;
+    left: 50%;
+    top: 50%;
+	
+	 height: 400px;
+    margin-top: -200px;
+	
+    margin-left: -300px;
+	-moz-border-radius:10px;  /* for Firefox */
+-webkit-border-radius:10px; /* for Webkit-Browsers */
+border-radius:10px; /* regular */
+opacity:0.9;
+ 
+}
+/*@media (max-width: 320px) {
+  .container-fluid#myForm {
+    
+	background-color:red;
+  }
+}
+@media (min-width: 320px) and (max-width: 800px) {
+  .container-fluid#myForm {
+    
+		background-color:blue;
+
+  }
+}
+@media (min-width: 800px) and (max-width: 2000px) {
+  .container-fluid#myForm {
+    
+		background-color:green;
+
+  }
+}*/
+
+#myLabel{
+display:inline;
+}
+.form-control{
+display:inline;
+width:200%;
+}
+.form-control#birth{
+width:100%;
+}
+td {
+    padding: 10px;
+}
