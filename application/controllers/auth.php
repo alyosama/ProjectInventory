@@ -81,7 +81,7 @@ class Auth extends CI_Controller
 						$this->_show_message($this->lang->line('auth_message_banned').' '.$errors['banned']);
 
 					} elseif (isset($errors['not_activated'])) {				// not activated user
-						redirect('/auth/hi/');   //Doha was redirect('/auth/send_again/'); 
+						redirect('/auth/send_again/');   //Doha was redirect('/auth/send_again/'); 
 
 					} else {													// fail
 						foreach ($errors as $k => $v)	$data['errors'][$k] = $this->lang->line($v);
@@ -271,7 +271,7 @@ function My_register()
 			}   */
 			$data['use_username'] = $use_username;
 			//$data['captcha_registration'] = $captcha_registration;
-		//	$data['use_recaptcha'] = $use_recaptcha;
+			//$data['use_recaptcha'] = $use_recaptcha;
 			$this->load->view('auth/myView_form', $data);
 		}
 	}
