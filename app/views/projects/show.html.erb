@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+	<strong>Photo</strong>
+	<%= image_tag @project.image if @project.image? %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @project.abstract %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+	<strong>Pdf: </strong>
+	<%= link_to 'attachment', @project.pdf_url  %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

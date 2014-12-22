@@ -1,14 +1,10 @@
 ProjectInventory
 ================
 
-This an Agile Project
+This an agile course project for fall 2014 , Ainshamsw university 
+we working on website for university projects so that students can add , view and review projects. 
 
+the purpose of the project is to learn the agile process. 
 
-Doha Basem
-Aly Osama
-Reem Hamdy
-Yousef Hamza
-Dalia Ayman
-Fatma Gamal
-Doaa Ahmed
-Yomna Ali
+Team Members
+Aly Osama, Doha Basem, Reem Hamdy, Yousef Hamza, Dalia Ayman, Fatma Gamal, Doaa Ahmed, Yomna Ali, Youssra
