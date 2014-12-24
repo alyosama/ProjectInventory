@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
 
   devise_for :users ,path_names: {sign_in: "login",sign_out: "logout"}
   resources :projects 
+  resources :users
   root "welcome#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

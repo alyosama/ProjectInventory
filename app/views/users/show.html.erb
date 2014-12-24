@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+	<strong>Photo</strong>
+	<%= image_tag @user.avatar if @user.avatar? %>
+</p>
+
+<p>
+  <strong>about:</strong>
+  <%= @user.about %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
