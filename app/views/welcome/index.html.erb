@@ -1,2 +1,276 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+<div class="header">
+ <div class="tiles">
+    <div class="header_mac"><a href="/projects/new" class="scroll">
+    	<i class="icon1"></i>
+		<h3>Upload <p> a project</h3>
+	</a></div>
+	<div class="header_book"><a href="/projects" class="scroll">
+    	<i class="icon2"></i>
+		<h3>Browse Projects</h3>
+	</a></div>
+	<div class="logo">
+		<a href="index.html"><img src="/images/logo.png" alt=""/></a>
+	</div>
+	<div class="header_team"><a href="#team" class="scroll">
+    	<i class="icon3"></i>
+		<h3>Follow Users</h3>
+	</a></div>
+	<div class="header_about"><a href="#about" class="scroll">
+    	<i class="icon4"></i>
+		<h3>About us</h3>
+	</a></div>
+	<div class="header_contact"><a href="#touch" class="scroll">
+    	<i class="icon5"></i>
+		<h3>Get in touch</h3>
+	</a></div>
+	<div class="header_social">	
+		<ul>	
+		   <li><a href=""> <i class="fb1"> </i> </a></li>
+		   <li><a href=""> <i class="tw1"> </i> </a></li>
+		   <li><a href=""> <i class="db1"> </i> </a></li>
+		   <li><a href=""> <i class="g1"> </i> </a></li>
+		   <li><a href=""> <i class="skype"> </i> </a></li>
+		   <li><a href=""> <i class="vimeo"> </i> </a></li>
+		</ul>
+	</div>
+	<div class="header_arrow">
+	  <a href="#arrow" class="scroll"><span> </span></a>
+    </div>
+    <div class="menu_down">																
+	   <a href="#" id="activator1"></a>
+	</div>
+ </div>
+</div>
+
+<div class="header_responsive"> 
+	<div class="tiles_resp">
+		<div class="header_arrow">
+	  <a href="#arrow" class="scroll"><span> </span></a>
+    </div>
+    <div class="menu">																
+			<a href="#" class="right_bt" id="activator"><img src="/images/menu_responsive.png" alt=""/></a>
+				<div class="box" id="box">
+				   <div class="box_content_center">
+					   <div class="menu_box_list">
+						   <ul>
+							   <li><a href="/projects/new" class="scroll">Upload a project</a></li>
+							   <li class="active"><a href="#about" class="scroll">About us</a></li> 
+							   <li><a href="/projects" class="scroll">Browse Projects</a></li>
+							   <li><a href="#team" class="scroll">Our team</a></li>
+							   <li><a href="#touch" class="scroll">Get in touch</a></li>
+							</ul>
+						</div>
+						<a class="boxclose" id="boxclose"><img src="/images/close.png" alt=""/></a>
+					  </div>                
+					</div>
+					<script type="text/javascript">
+								var $ = jQuery.noConflict();
+									$(function() {
+										$('#activator').click(function(){
+												$('#box').animate({'top':'0px'},500);
+										});
+										$('#boxclose').click(function(){
+												$('#box').animate({'top':'-700px'},500);
+										});
+									});
+									$(document).ready(function(){
+									
+									//Hide (Collapse) the toggle containers on load
+									$(".toggle_container").hide(); 
+									
+									//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+									$(".trigger").click(function(){
+										$(this).toggleClass("active").next().slideToggle("slow");
+										return false; //Prevent the browser jump to the link anchor
+									});
+									
+									});
+					</script>
+				</div> 	
+    </div>
+</div>
+<div class="main">
+	<div class="content_top text-center" id="arrow">
+		<div class="container">
+			<h1>Browse <span class='m_1'>Projects</span></h1>
+			<p class="head_text">View List of <span class="m_1">Projects</span> from here.</p>
+		</div>
+	</div>
+	<!-- Horizontal view of projects -->
+	<div class="team">
+		<div class="container">
+			<ul id="flexiselDemo3">
+			   <li><img src="images/c1.png" class="img-responsive" alt=""/></li>
+			     <li><img src="images/c2.png" class="img-responsive" alt=""/></li>
+			   <li><img src="images/c3.png" class="img-responsive" alt=""/></li>
+			   <li><img src="images/c4.png" class="img-responsive" alt=""/></li>
+			</ul>
+			<script type="text/javascript">
+				$(window).load(function() {
+					$("#flexiselDemo3").flexisel({
+						visibleItems: 5,
+						animationSpeed: 1000,
+						autoPlay: true,
+						autoPlaySpeed: 3000,    		
+						pauseOnHover: true,
+						enableResponsiveBreakpoints: true,
+				    	responsiveBreakpoints: { 
+				    		portrait: { 
+				    			changePoint:480,
+				    			visibleItems: 1
+				    		}, 
+				    		landscape: { 
+				    			changePoint:640,
+				    			visibleItems: 2
+				    		},
+				    		tablet: { 
+				    			changePoint:768,
+				    			visibleItems: 3
+				    		}
+				    	}
+				    });
+				    
+				});
+		 </script>
+         <script type="text/javascript" src="/js/jquery.flexisel.js"></script>
+	</div>
+    <!-- end of Horizontal view of projects -->
+    
+    <div class="about" id="about">
+		<div class="container">
+		  <div class="about_top">
+			<h2 class="m_3">About<span class="m_1"> Us</span></h2>
+			<p class="head_text">Typi non habent claritatem insitam; est usus legentis in iis <span class="m_1">qui facit eorum</span> claritatem. Investigationes demonstraverunt lectores legere me lius quod ii <span class="m_1">legunt</span> saepius.</p>
+		  </div>
+		  <div class="about_bottom">
+		  	<div class="col-md-6 about_left">
+		  		<p class="m_2">Duis autem vel eum iriure dolor in hendrerit in<span class="m_1"> vulputate velit esse molestie</span> consequat</p>
+		  		<p class="m_2">Duis autem vel eum iriure dolor in hendrerit in<span class="m_1"> vulputate</span> consequat, vel illum dolore</p>
+		  
+		  	   <a href="#" class="btn1 btn-1 btn-1b">Learn more</a>
+		  	</div>
+		  	<div class="col-md-6 about_right">
+		  		 <section class="slider">
+			        <div class="flexslider">
+			          <ul class="slides">
+			            <li><img src="/images/a1.jpg" class="img-responsive"  alt=""/></li>
+			  	    	<li><img src="/images/a1.jpg" class="img-responsive"  alt=""/></li>
+			  	    	<li><img src="/images/a1.jpg" class="img-responsive"  alt=""/></li>	
+			          </ul>
+			        </div>
+     			 </section>
+     			 <!-- FlexSlider -->
+  <script defer src="web/js/jquery.flexslider.js"></script>
+  <link rel="stylesheet" href="web/css/flexslider.css" type="text/css" media="all" />
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+   </div>
+    <div class="clearfix"> </div>
+    </div>
+   </div>
+  </div>
+
+	
+    <div class="about" id="what">
+		<div class="container">
+			<h3 class="m_4">Latest <span class="m_1"> Projects</span></h3>
+			<div class="posts">
+				<div class="col-md-4">
+				  <div class="post_grid">
+					<div class="view view-fifth"><a href="#">
+	                    <img src="/images/p1.jpg" class="img-responsive" alt=""/>
+					</div>
+					  <div class="post_desc">
+					   <h4><a href="#">Cheap Thermal Goggles</a></h4>
+					   <p>The technology that makes night vision possible is called an infrared image intensifier tube. The intensifier tube houses a photo cathode that transfers photons of light energy into electrons by releasing similar electrons from atoms inside the tube itself.</p>
+					   <div class="post_bottom">
+						   <ul class="time post_list">
+						   	 <i class='time1'> </i>
+						   	 <li class="time_desc">September 11</li>
+						   	 <div class="clearfix"> </div>
+						   </ul>
+						   <div class="clearfix"> </div>
+					   </div>
+					  </div>
+				   </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="post_grid">
+					<div class="view view-fifth"><a href="#">
+	                    <img src="/images/p2.jpg" class="img-responsive" alt=""/>
+	                   </a></div>
+					  <div class="post_desc">
+					   <h4><a href="#">Stop Motion Animation for Kids</a></h4>
+					   <p>Stop Motion Animation is the movie making method which uses static photographs of objects which are moved in tiny increments that when put together, look like a live action movie.</p>
+					   <div class="post_bottom">
+						   <ul class="time post_list">
+						   	 <i class='time1'> </i>
+						   	 <li class="time_desc">September 11</li>
+						   	 <div class="clearfix"> </div>
+						   </ul>
+						   <!--<ul class="time">
+						   	 <i class='bubble'> </i>
+						   	 <li class="time_desc">19</li>
+						   	 <div class="clearfix"> </div>
+						   </ul> -->
+						   <div class="clearfix"> </div>
+					   </div>
+					   </div>
+				   </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="post_grid">
+					<div class="view view-fifth"><a href="#">
+	                    <img src="/images/p3.jpg" class="img-responsive" alt=""/>
+	                     </a></div>
+					<div class="post_desc">
+					   <h4><a href="#">Gear Designer</a></h4>
+					   <p>Badog Gear designer allows you to easily add standard or custom gears to your CNC project. The gear models created are standard DXF models that can be added to your assembly drawing or 2D entities.</p>
+					   <div class="post_bottom">
+						   <ul class="time post_list">
+						   	 <i class='time1'> </i>
+						   	 <li class="time_desc">September 11</li>
+						   	 <div class="clearfix"> </div>
+						   <!--</ul>
+						   <ul class="time">
+						   	 <i class='bubble'> </i>
+						   	 <li class="time_desc">19</li>
+						   	 <div class="clearfix"> </div>
+						   </ul> -->
+						   <div class="clearfix"> </div>
+					   </div>
+					</div>
+				   </div>
+				</div>
+				<div class="clearfix"></div>
+			  </div>
+			  <div class="post_but">
+			    <a href="#" class="btn1 btn-1 btn-1b">More posts</a>
+			  </div>
+		</div>
+	</div>
+	
+	   <div class="about">
+	   	<div class="container">
+	   		
+	   <div class="subscribe">
+	   	 <div class="container">
+	   		<h4>Subscribe to <span class="m_1">Our </span>newsletter</h4>
+	   		<p>If you want to get updated with the latest projects</span></p>
+	   		<input type="text" class="textbox" value="Enter your E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your email address';}">
+	   		<label class="btn1 btn3 btn-1 btn-1b"><input type="submit" value="Subscribe now"></label>
+	   	 </div>
+	   </div>
+</div>

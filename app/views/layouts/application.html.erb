@@ -3,26 +3,93 @@
 <head>
 	<title>ProjectInventory</title>
 	<%= stylesheet_link_tag    'application.css.scss', media: 'all' %>
+	<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/css/style.css" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
-</head>
-<body>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 
-	
-	<div id="user_nav">
-		<% if user_signed_in? %>
-		Logged in as <strong><%= current_user.email %></strong>.
-		<%= link_to 'Edit profile', edit_user_registration_path %> |
-		<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-		<% else %>
-		<%= link_to "Sign up", new_user_registration_path %> |
-		<%= link_to "Login", new_user_session_path %>
-		<% end %>
-	</div>
-	
-	<%= yield %>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+	</script>
+	<script type="text/javascript" src="/js/move-top.js"></script>
+	<script type="text/javascript" src="/js/easing.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+					 		*/
+
+					 		$().UItoTop({ easingType: 'easeOutQuart' });
+
+					 	});
+	</script>
+</head>
+
+<body>
+
+
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-static">
+		<div class="nav_container">
+			<a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</a>
+			<div class="nav-collapse collase">
+				<ul class="nav navbar-nav">  
+					<li><a href="#">Home</a></li>
+					<li> <img src="/images/logoc.png" alt=""/></li>
+				</ul>
+
+				<ul class="nav navbar-right navbar-nav">
+					<li class="search" style="padding:12px;">
+						<form class="form-inline" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<!--<button type="submit" class="btn btn-default">Submit</button> -->
+							<a href="index.html"><img src="/images/search.png" alt=""/></a>
+						</form>
+            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+            <ul class="dropdown-menu" style="padding:12px;">
+                <form class="form-inline">
+     				<button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+                </form>
+            </ul> -->
+        </li>
+        <% if user_signed_in? %>
+        <li>Logged in as <strong><%= current_user.email %></strong></li> 
+        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+
+    </ul>
+
+</div>		
+</div>
+</nav><!-- /.navbar -->
+
+
+
+<%= yield %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 </body>
 </html>
