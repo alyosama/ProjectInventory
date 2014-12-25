@@ -1,26 +1,29 @@
-
 <div class="header">
  <div class="tiles">
-    <div class="header_mac"><a href="/projects/new" class="scroll">
-    	<i class="icon1"></i>
+    <div class="header_mac"><!-- <a href="/projects/new" class="scroll"> -->
+    	<%= link_to new_project_path(@project) do %>
+		<i class="icon1"></i>
 		<h3>Upload <p> a project</h3>
-	</a></div>
-	<div class="header_book"><a href="/projects" class="scroll">
+		<% end %>
+	</div>
+	<div class="header_book"><a href="#projects" class="scroll">
     	<i class="icon2"></i>
 		<h3>Browse Projects</h3>
 	</a></div>
 	<div class="logo">
 		<a href="index.html"><img src="/images/logo.png" alt=""/></a>
 	</div>
-	<div class="header_team"><a href="#team" class="scroll">
-    	<i class="icon3"></i>
+	<div class="header_follow_users"><!-- <a href="#follow_users" class="scroll"> -->
+		<%= link_to users_path do %>
+		<i class="icon3"></i>
 		<h3>Follow Users</h3>
-	</a></div>
+		<% end %>
+	</div>
 	<div class="header_about"><a href="#about" class="scroll">
     	<i class="icon4"></i>
 		<h3>About us</h3>
 	</a></div>
-	<div class="header_contact"><a href="#touch" class="scroll">
+	<div class="header_contact"><a href="#subscribe" class="scroll">
     	<i class="icon5"></i>
 		<h3>Get in touch</h3>
 	</a></div>
@@ -43,63 +46,58 @@
  </div>
 </div>
 
-<div class="header_responsive"> 
-	<div class="tiles_resp">
-		<div class="header_arrow">
-	  <a href="#arrow" class="scroll"><span> </span></a>
-    </div>
-    <div class="menu">																
-			<a href="#" class="right_bt" id="activator"><img src="/images/menu_responsive.png" alt=""/></a>
-				<div class="box" id="box">
-				   <div class="box_content_center">
-					   <div class="menu_box_list">
-						   <ul>
-							   <li><a href="/projects/new" class="scroll">Upload a project</a></li>
-							   <li class="active"><a href="#about" class="scroll">About us</a></li> 
-							   <li><a href="/projects" class="scroll">Browse Projects</a></li>
-							   <li><a href="#team" class="scroll">Our team</a></li>
-							   <li><a href="#touch" class="scroll">Get in touch</a></li>
-							</ul>
-						</div>
-						<a class="boxclose" id="boxclose"><img src="/images/close.png" alt=""/></a>
-					  </div>                
-					</div>
-					<script type="text/javascript">
-								var $ = jQuery.noConflict();
-									$(function() {
-										$('#activator').click(function(){
-												$('#box').animate({'top':'0px'},500);
-										});
-										$('#boxclose').click(function(){
-												$('#box').animate({'top':'-700px'},500);
-										});
-									});
-									$(document).ready(function(){
-									
-									//Hide (Collapse) the toggle containers on load
-									$(".toggle_container").hide(); 
-									
-									//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-									$(".trigger").click(function(){
-										$(this).toggleClass("active").next().slideToggle("slow");
-										return false; //Prevent the browser jump to the link anchor
-									});
-									
-									});
-					</script>
-				</div> 	
-    </div>
-</div>
+
+
 <div class="main">
-	<div class="content_top text-center" id="arrow">
+    <div class="about" id="about">
 		<div class="container">
-			<h1>Browse <span class='m_1'>Projects</span></h1>
-			<p class="head_text">View List of <span class="m_1">Projects</span> from here.</p>
-		</div>
-	</div>
+		  <div class="about_top">
+			<h2 class="m_3">About<span class="m_1"> Us</span></h2>
+			<p class="head_text"></p>
+		  </div>
+		  <div class="about_bottom">
+		  	<div class="col-md-6 about_left">
+		  		<p class="m_2">We believe in the power of sharing. Once a project is shared, another more advanced one is being worked on. Help us spread the knowledge.</p>
+		  		<!-- <p class="m_2">Duis autem vel eum iriure dolor in hendrerit in<span class="m_1"> vulputate velit esse molestie</span> consequat</p>
+		  		<p class="m_2">Duis autem vel eum iriure dolor in hendrerit in<span class="m_1"> vulputate</span> consequat, vel illum dolore</p> -->
+		  
+		  	   <!-- <a href="#" class="btn1 btn-1 btn-1b">Learn more</a> -->
+		  	</div>
+		  	<div class="col-md-6 about_right">
+		  		 <section class="slider">
+			        <div class="flexslider">
+			          <ul class="slides">
+			            <li><img src="/images/p1.jpg" class="img-responsive"  alt=""/></li>
+			  	    	<li><img src="/images/p3.jpg" class="img-responsive"  alt=""/></li>
+			  	    	<li><img src="/images/p4.jpg" class="img-responsive"  alt=""/></li>	
+			          </ul>
+			        </div>
+     			 </section>
+     			 <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+   </div>
+
+   <div class="clearfix"> </div>
 	<!-- Horizontal view of projects -->
-	<div class="team">
+	<div class="follow_users">
 		<div class="container">
+			<div class="content_top text-center" id="arrow">
+				<h1>Browse <span class='m_1'>Projects</span></h1>
+			</div>
 			<ul id="flexiselDemo3">
 			   <li><img src="images/c1.png" class="img-responsive" alt=""/></li>
 			     <li><img src="images/c2.png" class="img-responsive" alt=""/></li>
@@ -137,53 +135,12 @@
 	</div>
     <!-- end of Horizontal view of projects -->
     
-    <div class="about" id="about">
-		<div class="container">
-		  <div class="about_top">
-			<h2 class="m_3">About<span class="m_1"> Us</span></h2>
-			<p class="head_text">Typi non habent claritatem insitam; est usus legentis in iis <span class="m_1">qui facit eorum</span> claritatem. Investigationes demonstraverunt lectores legere me lius quod ii <span class="m_1">legunt</span> saepius.</p>
-		  </div>
-		  <div class="about_bottom">
-		  	<div class="col-md-6 about_left">
-		  		<p class="m_2">Duis autem vel eum iriure dolor in hendrerit in<span class="m_1"> vulputate velit esse molestie</span> consequat</p>
-		  		<p class="m_2">Duis autem vel eum iriure dolor in hendrerit in<span class="m_1"> vulputate</span> consequat, vel illum dolore</p>
-		  
-		  	   <a href="#" class="btn1 btn-1 btn-1b">Learn more</a>
-		  	</div>
-		  	<div class="col-md-6 about_right">
-		  		 <section class="slider">
-			        <div class="flexslider">
-			          <ul class="slides">
-			            <li><img src="/images/a1.jpg" class="img-responsive"  alt=""/></li>
-			  	    	<li><img src="/images/a1.jpg" class="img-responsive"  alt=""/></li>
-			  	    	<li><img src="/images/a1.jpg" class="img-responsive"  alt=""/></li>	
-			          </ul>
-			        </div>
-     			 </section>
-     			 <!-- FlexSlider -->
-  <script defer src="web/js/jquery.flexslider.js"></script>
-  <link rel="stylesheet" href="web/css/flexslider.css" type="text/css" media="all" />
-  <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-   </div>
-    <div class="clearfix"> </div>
     </div>
    </div>
   </div>
 
-	
-    <div class="about" id="what">
+	<!-- Latest Projects -->
+    <div class="about" id="projects">
 		<div class="container">
 			<h3 class="m_4">Latest <span class="m_1"> Projects</span></h3>
 			<div class="posts">
@@ -233,7 +190,7 @@
 				<div class="col-md-4">
 				  <div class="post_grid">
 					<div class="view view-fifth"><a href="#">
-	                    <img src="/images/p3.jpg" class="img-responsive" alt=""/>
+	                    <img src="/images/p4.jpg" class="img-responsive" alt=""/>
 	                     </a></div>
 					<div class="post_desc">
 					   <h4><a href="#">Gear Designer</a></h4>
@@ -257,19 +214,20 @@
 				<div class="clearfix"></div>
 			  </div>
 			  <div class="post_but">
-			    <a href="#" class="btn1 btn-1 btn-1b">More posts</a>
+			    <!-- <a href="projects/index" class="btn1 btn-1 btn-1b">More projects</a> -->
+			    <%= link_to projects_path(@project) do %>
+					<div class="btn1 btn-1 btn-1b">More projects</div>
+				<% end %>
 			  </div>
 		</div>
 	</div>
-	
-	   <div class="about">
-	   	<div class="container">
-	   		
-	   <div class="subscribe">
+	<!-- end of Latest Projects -->
+
+	   <div class="subscribe" id="subscribe">
 	   	 <div class="container">
 	   		<h4>Subscribe to <span class="m_1">Our </span>newsletter</h4>
 	   		<p>If you want to get updated with the latest projects</span></p>
-	   		<input type="text" class="textbox" value="Enter your E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your email address';}">
+	   		<input type="text" class="textbox" value="Enter your E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your E-mail address';}">
 	   		<label class="btn1 btn3 btn-1 btn-1b"><input type="submit" value="Subscribe now"></label>
 	   	 </div>
 	   </div>
