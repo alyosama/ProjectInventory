@@ -1,23 +1,29 @@
-<h1>Listing Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>about</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to user.username, user %></td>
-        <td><%= user.email %></td>
-        <td><%= user.about %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<img src="/images/Capture.PNG" class="img-responsive" alt=""/>
+<div class="about" id="users">
+	<div class="container">
+		
+		<h3 class="m_4">Follow <span class="m_1"> Users</span></h3>
+		<div class="bs-example">
+			<div class="container">
+				<div class="row">
+					<% @users.each do |user| %>	
+					<div class="col-xs-2">
+						<div class="thumbnail">
+						<% if user.avatar? %>
+							<%= image_tag user.avatar %>
+						<% else %>
+							<img src="/images/Profile.jpg" alt="Sample Image" >
+						<% end %>
+							<div class="caption">
+								<h3><span class="m_1"><%=user.username%></span></h3>
+								<p><%= user.about %></p>
+								<p><%= link_to "View Profile", user %></p>
+								</div>		
+							</div>
+						</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>

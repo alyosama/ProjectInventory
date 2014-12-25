@@ -11,18 +11,18 @@
 
 
 	<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
 		});
-	});
 	</script>
 	<script type="text/javascript" src="/js/move-top.js"></script>
 	<script type="text/javascript" src="/js/easing.js"></script>
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() {
+		$(document).ready(function() {
 							/*
 							var defaults = {
 					  			containerID: 'toTop', // fading element id
@@ -48,10 +48,7 @@
 				<span class="glyphicon glyphicon-chevron-down"></span>
 			</a>
 			<div class="nav-collapse collase">
-				<ul class="nav navbar-nav">  
-					<li><a href="#">Home</a></li>
-					<li> <img src="/images/logoc.png" alt=""/></li>
-				</ul>
+				<a href="/"><img src="/images/logoc.png" alt=""/></a>
 
 				<ul class="nav navbar-right navbar-nav">
 					<li class="search" style="padding:12px;">
@@ -59,37 +56,41 @@
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Search">
 							</div>
-							<!--<button type="submit" class="btn btn-default">Submit</button> -->
 							<a href="index.html"><img src="/images/search.png" alt=""/></a>
 						</form>
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-            <ul class="dropdown-menu" style="padding:12px;">
-                <form class="form-inline">
-     				<button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-                </form>
-            </ul> -->
-        </li>
-        <% if user_signed_in? %>
-        <li>Logged in as <strong><%= current_user.email %></strong></li> 
-        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-        <li><%= link_to "Login", new_user_session_path %></li>
-        <li><%= link_to "Sign up", new_user_registration_path %></li>
-        <% end %>
+					</li>
 
-    </ul>
+					<% if user_signed_in? %>
+						<li> <%= link_to current_user.username , current_user %></li>
+						<li ><%= link_to 'Edit profile', edit_user_registration_path %></li>
+						<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+					<% else %>
+						<li><%= link_to "Login", new_user_session_path %></li>
+						<li><%= link_to "Sign up", new_user_registration_path %></li>
+					<% end %>
 
-</div>		
-</div>
-</nav><!-- /.navbar -->
+				</ul>
+
+			</div>		
+		</div>
+	</nav><!-- /.navbar -->
 
 
 
-<%= yield %>
+	<%= yield %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+	<!-- Footer -->
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>Copyright &copy; Project Inventory 2014</p>
+			</div>
+		</div>
+		<!-- /.row -->
+	</footer>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 
 </body>
 </html>
