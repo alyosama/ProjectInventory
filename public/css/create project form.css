@@ -1,0 +1,94 @@
+label{
+	float: -70px;
+	width: 150px;
+	font-weight: bold;
+}
+.form1{
+	background-color:#EEEEEE; 
+	padding-top: 6em;
+	padding-left: 10em;
+}
+
+.k-textbox { 
+	text-indent: left; 
+	border-radius:3px;
+	border: 1px solid #C5C5C5; 
+	padding:0px 3px;
+	width:217px;
+	height:28px;
+
+}
+
+.project_abstract{
+	width: auto;
+	height: auto;
+    display: block;
+}
+
+.project_name{
+	width: 430px;
+}
+.k-textbox:hover{
+	border: 1px solid #0288dd;
+}
+
+.project_thumbnail {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+.project_thumbnail input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.project_document{
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+
+.project_document input.upload{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+
+.btn{
+	background-color: #2753b7;
+	border-color: #2753b7;
+	width: 160px;
+	margin: auto;
+	color: #fff;
+	
+}
+ 
+
+.btn:focus, .btn:active, .btn:hover{
+      background-color: #fff;
+      border-color: #2753b7;
+      color: #2753b7;
+}
+
+.btn_createproj {
+	margin-left:5em; 
+	border-radius: 9px;
+	margin-bottom: 3em;
+}
+.btn_createproj:focus, .btn_createproj:active, .btn_createproj:hover{
+      background-color: #fff;
+      border-color: #2753b7;
+      color: #2753b7;
+}
