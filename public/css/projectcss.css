@@ -1,0 +1,151 @@
+*{
+    font-family: 'Asap', sans-serif;
+}
+
+.well {
+    margin-top:-20px;
+    background-color:#2753b7;
+    border:2px solid #FFFFFF;
+    text-align:center;
+    cursor:pointer;
+    font-size: 22px;
+    padding: 14px;
+    border-radius: 0px !important;
+}
+
+.well:hover {
+    margin-top:-20px;
+    background-color:#2753b7;
+    text-align:center;
+    cursor:pointer;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 0px !important;
+	color: #fff;
+    border-bottom: 4px solid #17316d;
+}
+
+body {
+font-family: 'Asap', sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #fff;
+background-color: #F1F1F1;
+}
+
+.bg_blur
+{
+    background-image:url('/images/project.png');
+    height: 450px;
+    background-size: cover;
+}
+
+.edit_btn {
+    text-decoration: none;
+    position: absolute;
+    left: 35%;
+    top: 42.5%;
+    width: 35%;
+    height: 10%;
+    background-color: #2753b7;
+    padding: 10px;
+    padding-top: 6px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #234aa4;
+}
+
+.edit_btn:hover {
+    text-decoration: none;
+    position: absolute;
+    left: 34%;
+    top: 41%;
+    width: 40%;
+    height: 12%;
+    background-color: #000;
+    padding: 6px;
+    padding-top: 6px;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    border:2px solid #191919;
+}
+
+.header_project{
+    color : #808080;
+    margin-left:10%;
+    margin-top:70px;
+}
+
+.picture{
+	
+    height:150px;
+    width:150px;
+    position:absolute;
+    top: 75px;
+    left:-75px;
+}
+
+.btn-style{
+    color: #fff;
+    background-color: #007FBE;
+    border-color: #adadad;
+    width: 33.3%;
+}
+
+.btn-style:hover {
+    color: #333;
+    background-color: #3D5DE0;
+    border-color: #adadad;
+    width: 33.3%;
+   
+}
+		right: 5px;
+		opacity: 1;
+	}
+
+@media (max-width: 767px) {
+    .header{
+        text-align : center;
+    }
+    
+    
+    
+    .nav{
+        margin-top : 30px;
+    }
+}
+
+
+.clickable{
+    cursor: pointer;
+}
+
+.clickable .fa{
+    background: #fff;
+    color: #777;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 0px
+}
+
+.panel-heading span{
+    background-color: #2753b7; 
+    margin-top: -23px;
+    font-size: 15px;
+    margin-right: -9px;
+}
+
+.panel-title{
+    font-size: 20px;
+    font-family: 'Asap', sans-serif;
+}
+
+.panel-body{
+    color: #000;
+}
+
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none; }
+

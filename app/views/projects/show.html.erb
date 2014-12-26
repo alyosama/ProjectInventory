@@ -1,29 +1,72 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="/css/projectcss.css" rel="stylesheet" type="text/css">
+<script src="/js/projectjs.js"></script>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<div class="container" style="margin-bottom: 20px;">
+  <div class="row">
+    <img src="/images/Capture.PNG" class="img-responsive" alt=""/>
+        </div>
+  <div class="row panel">
+    <div class="col-md-4 bg_blur ">
+      <%= link_to 'Edit Project', edit_project_path(@project),:class=>"edit_btn hidden-xs" %> 
+    </div>
+    <div class="col-md-8  col-xs-12">
+      <img src="/images/avatar.png" class="img-thumbnail picture hidden-xs" />
+      <div class="header_project">
+        <h1> <%= @project.name %></h1>
+          <dl>
+            <dt style="font-size: 20px; margin: 20px;">Project Abstraction</dt>
+            <dd style="font-size: 16px; margin: 2px;">  <%= @project.abstract %></dd>
+          </dl>
+      </div>
+    </div>
+  </div>   
+  <div class="row nav">    
+    <div class="col-md-4"></div>
+    <div class="col-md-8 col-xs-12" style="margin: 0px;padding: 0px;">
+      <div class="col-md-3 col-xs-3 well"><i class="fa fa-thumbs-o-up fa-lg"></i></div>
+      <div class="col-md-3 col-xs-3 well"><i class="fa fa-bookmark-o fa-lg"></i></div>
+      <div class="col-md-3 col-xs-3 well"><i class="fa fa-share-alt fa-lg"></i></div>
+      <div class="col-md-3 col-xs-3 well"><i class="fa fa-linkedin fa-lg"></i></div>
+    </div>
+  </div>
+</div>
 
-<p>
-	<strong>Photo</strong>
-	<%= image_tag @project.image if @project.image? %>
-</p>
+<div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading clickable">
+          <h1 class="panel-title">
+            Project Details</h1>
+          <span class="pull-right "><i class="fa fa-minus"></i></span>
+        </div>
+        <div class="panel-body">
+          <p style="font-size: 20px; margin: 16px;"><%= @project.description %></p>
+          <p style="font-size: 20px; margin: 16px;"><%= link_to 'attachment', @project.pdf_url  %></p>
+          <iframe width="500" height="400"
+            src="http://www.youtube.com/embed/G5FUH3eoizc">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title">
+            Questions & Answers</h3>
+          <span class="pull-right "><i class="fa fa-minus"></i></span>
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Abstract:</strong>
-  <%= @project.abstract %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
 
-<p>
-	<strong>Pdf: </strong>
-	<%= link_to 'attachment', @project.pdf_url  %>
-</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
