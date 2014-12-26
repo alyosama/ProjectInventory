@@ -1,20 +1,21 @@
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <link href="/css/projectcss.css" rel="stylesheet" type="text/css">
-<script src="/js/projectjs.js"></script>
-
-<p id="notice"><%= notice %></p>
 
 <div class="container" style="margin-bottom: 20px;">
   <div class="row">
     <img src="/images/Capture.PNG" class="img-responsive" alt=""/>
         </div>
   <div class="row panel">
-    <div class="col-md-4 bg_blur ">
+    <div class="col-md-4 bg_blur " >
+
       <%= link_to 'Edit Project', edit_project_path(@project),:class=>"edit_btn hidden-xs" %> 
     </div>
     <div class="col-md-8  col-xs-12">
+    <% if @project.image? %>
+      <%= image_tag @project.image,:class=>"img-thumbnail picture hidden-xs"%>
+    <% else %>
       <img src="/images/avatar.png" class="img-thumbnail picture hidden-xs" />
+    <% end %>
       <div class="header_project">
         <h1> <%= @project.name %></h1>
           <dl>
@@ -40,13 +41,14 @@
     <div class="col-md-6">
       <div class="panel panel-primary">
         <div class="panel-heading clickable">
+      
           <h1 class="panel-title">
             Project Details</h1>
           <span class="pull-right "><i class="fa fa-minus"></i></span>
         </div>
         <div class="panel-body">
           <p style="font-size: 20px; margin: 16px;"><%= @project.description %></p>
-          <p style="font-size: 20px; margin: 16px;"><%= link_to 'attachment', @project.pdf_url  %></p>
+          <p style="font-size: 20px; margin: 16px;"><%= link_to 'Attachment', @project.pdf_url  %></p>
           <iframe width="500" height="400"
             src="http://www.youtube.com/embed/G5FUH3eoizc">
           </iframe>
