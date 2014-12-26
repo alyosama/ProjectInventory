@@ -1,29 +1,33 @@
 <h1>Listing projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Abstract</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.abstract %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="about" id="what">
+        <div class="container">
+          <div class="posts">
+            <div class="col-md-4">
+              <div class="post_grid">
+              <div class="view view-fifth"><a href="#">
+                          <img src="bootstrap/images/p1.jpg" class="img-responsive" alt=""/>
+              </div>
+                <div class="post_desc">
+                 <h4><%= project.name %>,</a></h4>
+                 <p><%= project.abstract %></p>
+                 <div class="post_bottom">
+                   <ul class="time post_list">
+                     <i class='time1'> </i>
+                     <li class="time_desc">December 25</li>
+                     <li><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                     <div class="clearfix"> </div>
+                   </ul>
+                   <div class="clearfix"> </div>
+                 </div>
+                </div>
+               </div>
+            </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
 <br>
-
-<%= link_to 'New Project', new_project_path %>
+<!--
+  This should be some where in the header
+  <%= link_to 'New Project', new_project_path %>
+-->
