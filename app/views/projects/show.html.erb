@@ -40,14 +40,14 @@
   <div class="row">
     <div class="col-md-6">
       <div class="panel panel-primary">
-        <div class="panel-heading clickable">
+        <div class="panel-heading">
       
           <h1 class="panel-title">
             Project Details</h1>
           <span class="pull-right "><i class="fa fa-minus"></i></span>
         </div>
         <div class="panel-body">
-          <p style="font-size: 20px; margin: 16px;"><%= @project.description %></p>
+          <%=raw(@project.description) %>
           <p style="font-size: 20px; margin: 16px;"><%= link_to 'Attachment', @project.pdf_url  %></p>
           <iframe width="500" height="400"
             src="http://www.youtube.com/embed/G5FUH3eoizc">
