@@ -31,13 +31,19 @@
   }
   a:hover{
     text-decoration:none;
-    color: #FF7F38;
+    color: #2753b7;
   }
   .btn{
-    background-color: #FF7F38;
-    border-color: #FF7F38;
+    background-color: #2753b7;
+    border-color: #2753b7;
   }
+.btn:focus, .btn:active, .btn:hover{
+      border-color: #2753b7;
+      color: #2753b7;
+      background-color: #FFF; 
+    
 
+}
 
   
   </style>
@@ -109,5 +115,3 @@
 
 
 <% end %>
-
-<%= render "devise/shared/links" %>
