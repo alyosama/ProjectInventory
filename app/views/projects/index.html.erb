@@ -1,5 +1,4 @@
-<h1>Projects</h1>
-<h4 style="diplay: inline; float: right; padding-right: 10px;"><%= link_to 'Add Project', new_project_path %></h4>
+<img src="/images/Capture.PNG" class="img-responsive" alt=""/>
     <% @projects.each do |project| %>
       <div class="about" id="what">
         <div class="container">
@@ -10,13 +9,12 @@
                           <img src=<%= project.image %> class="img-responsive" alt=""/>
               </div>
                 <div class="post_desc">
-                 <h4><%= project.name %>,</a></h4>
+                 <h4><%= link_to project.name , project %></h4>
                  <p><%= project.abstract %></p>
                  <div class="post_bottom">
                    <ul class="time post_list">
                      <i class='time1'> </i>
                      <li class="time_desc">December 25</li>
-                     <li><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
                      <div class="clearfix"> </div>
                    </ul>
                    <div class="clearfix"> </div>
@@ -28,3 +26,5 @@
       </div>
     <% end %>
 <br>
+     <h3 style="display: inline; float: right; " class="btn"><%= link_to 'Add Project', new_project_path %></h3>
+   
