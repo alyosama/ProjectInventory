@@ -50,7 +50,7 @@
           <%=raw(@project.description) %>
           <p style="font-size: 20px; margin: 16px;"><%= link_to 'Attachment', @project.pdf_url  %></p>
           <iframe width="500" height="400"
-            src="http://www.youtube.com/embed/G5FUH3eoizc">
+            src="<%= @project.video %>">
           </iframe>
         </div>
       </div>
