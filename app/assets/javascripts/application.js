@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require move-top
+//= require easing
+//= require scripts
+//= require circles
+//= require projectjs
 //= require turbolinks
 //= require_tree .
 //= require tinymce-jquery
