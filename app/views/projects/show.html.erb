@@ -6,14 +6,16 @@
     <img src="/images/Capture.PNG" class="img-responsive" alt=""/>
         </div>
   <div class="row panel">
-    <div class="col-md-4 bg_blur " >
-
+    <div class="col-md-6 " >
+    <% if @project.image? %>
+      <%= image_tag @project.image, :class=>" bg_blur", :width=>"550",:height=>"100"%>
+    <% else %>
+      <img src="/images/project.png" />
+    <% end %>
       <%= link_to 'Edit Project', edit_project_path(@project),:class=>"edit_btn hidden-xs" %> 
     </div>
-    <div class="col-md-8  col-xs-12">
+    <div class="col-md-4  col-xs-12">
     <% if @project.image? %>
-      <%= image_tag @project.image,:class=>"img-thumbnail picture hidden-xs"%>
-    <% else %>
       <img src="/images/avatar.png" class="img-thumbnail picture hidden-xs" />
     <% end %>
       <div class="header_project">
@@ -44,13 +46,13 @@
       
           <h1 class="panel-title">
             Project Details</h1>
-          <span class="pull-right "><i class="fa fa-minus"></i></span>
+          <span class="pull-right fa"><i class="fa fa-minus"></i></span>
         </div>
         <div class="panel-body">
           <%=raw(@project.description) %>
           <p style="font-size: 20px; margin: 16px;"><%= link_to 'Attachment', @project.pdf_url  %></p>
           <iframe width="500" height="400"
-            src="<%= @project.video %>">
+            src="http://www.youtube.com/embed/G5FUH3eoizc">
           </iframe>
         </div>
       </div>
@@ -68,7 +70,6 @@
     </div>
   </div>
 </div>
-
 
 
 
